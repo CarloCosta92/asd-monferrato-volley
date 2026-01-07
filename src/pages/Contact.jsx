@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { contactSchema } from "../schemas/ContactShema";
 import Button from "../components/Button";
+import CallToAction from "../components/CalltoAction";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -40,7 +41,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@asdmonferratovolley.it",
+      content: "info@asdmonferratovolle.it",
       gradient: "from-(--color-primary) to-(--color-secondary)",
     },
   ];
@@ -83,9 +84,8 @@ const Contact = () => {
         </div>
 
         {/* Form */}
-        {/* Form + Info Laterali */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Form */}
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-r from-(--color-primary) to-(--color-secondary) rounded-3xl blur-2xl opacity-20"></div>
             <div className="relative bg-(--color-bg-alt)/80 backdrop-blur-sm p-8 rounded-3xl border border-(--color-border)">
@@ -100,7 +100,6 @@ const Contact = () => {
               )}
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                {/* Nome, Email, Telefono, Oggetto, Messaggio */}
                 {["name", "email", "phone", "subject"].map((field) => (
                   <div key={field}>
                     <label className="block text-(--color-text) font-medium mb-2">
@@ -158,7 +157,6 @@ const Contact = () => {
 
           {/* Info laterali: Orari + Mappa */}
           <div className="space-y-8">
-            {/* Orari di Apertura */}
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-r from-(--color-primary) to-(--color-secondary) rounded-3xl blur-2xl opacity-20"></div>
               <div className="relative bg-(--color-bg-alt)/80 backdrop-blur-sm p-8 rounded-3xl border border-(--color-border)">
@@ -188,7 +186,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Mappa */}
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-r from-(--color-secondary) to-(--color-primary) rounded-3xl blur-2xl opacity-20"></div>
               <div className="relative bg-(--color-bg-alt)/80 backdrop-blur-sm p-8 rounded-3xl border border-(--color-border)">
@@ -214,6 +211,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <CallToAction />
       </div>
     </div>
   );

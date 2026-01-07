@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Trophy, Users, Calendar, TrendingUp } from "lucide-react";
 import Button from "../components/Button";
+import CallToAction from "../components/CalltoAction";
 
 const Home = () => {
   const stats = [
@@ -50,6 +51,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <CallToAction />
     </>
   );
 };

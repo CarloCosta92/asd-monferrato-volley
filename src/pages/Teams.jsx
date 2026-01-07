@@ -1,5 +1,6 @@
 import { Users, Trophy, Target } from "lucide-react";
 import Button from "../components/Button";
+import CallToAction from "../components/CalltoAction";
 
 const Teams = () => {
   const teams = [
@@ -48,10 +49,9 @@ const Teams = () => {
   return (
     <div className="pt-32 pb-20 bg-(--color-bg-main) text-(--color-text)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Titolo */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-black text-white mb-6">
-            Le Nostre{" "}
+            Le Nostre
             <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
               Squadre
             </span>
@@ -62,17 +62,14 @@ const Teams = () => {
           </p>
         </div>
 
-        {/* Schede squadre */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {teams.map((team, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-3xl bg-(--color-bg-alt)/50 backdrop-blur-sm border border-(--color-border) hover:border-(--color-primary) transition-all duration-500"
             >
-              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-linear-to-br from-(--color-primary)/20 to-(--color-secondary)/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Immagine */}
               <div className="relative h-64 overflow-hidden rounded-t-3xl">
                 <img
                   src={team.image}
@@ -84,7 +81,6 @@ const Teams = () => {
                 ></div>
               </div>
 
-              {/* Info */}
               <div className="relative p-8 flex flex-col">
                 <h3 className="text-3xl font-bold text-(--color-text) mb-3">
                   {team.name}
@@ -93,7 +89,6 @@ const Teams = () => {
                   {team.description}
                 </p>
 
-                {/* Statistiche */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-(--color-bg-alt)/20 rounded-xl p-4 border border-(--color-border) flex flex-col items-center">
                     <Users className="h-6 w-6 text-(--color-primary) mb-2" />
@@ -112,7 +107,6 @@ const Teams = () => {
                   </div>
                 </div>
 
-                {/* Bottone */}
                 <Button to="/contatti" variant="primary" className="mt-auto">
                   Scopri di più
                 </Button>
@@ -121,18 +115,7 @@ const Teams = () => {
           ))}
         </div>
 
-        {/* Call to action */}
-        <div className="mt-20 bg-(--color-bg-alt)/20 backdrop-blur-sm rounded-3xl p-12 border border-(--color-border) text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Vuoi Unirti a Noi?
-          </h2>
-          <p className="text-xl text-(--color-text-muted) mb-8 max-w-2xl mx-auto">
-            Siamo sempre alla ricerca di nuovi talenti. Vieni a provare con noi!
-          </p>
-          <Button to="/contatti" variant="primary">
-            Richiedi Informazioni
-          </Button>
-        </div>
+        <CallToAction />
       </div>
     </div>
   );

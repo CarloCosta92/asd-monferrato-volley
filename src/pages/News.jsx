@@ -1,4 +1,5 @@
 import { Calendar, Tag, ArrowRight } from "lucide-react";
+import CallToAction from "../components/CalltoAction";
 
 const News = () => {
   const news = [
@@ -61,14 +62,12 @@ const News = () => {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {news.map((item, index) => (
             <article
               key={index}
               className="group relative bg-(--color-bg-alt)/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-(--color-border) hover:border-(--color-primary)/50 transition-all duration-500 hover:scale-[1.03]"
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image}
@@ -92,7 +91,6 @@ const News = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <div className="flex items-center gap-2 text-(--color-text-muted) text-sm mb-3">
                   <Calendar className="h-4 w-4" />
@@ -113,7 +111,6 @@ const News = () => {
                 </button>
               </div>
 
-              {/* Hover glow */}
               <div
                 className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}
               />
@@ -121,12 +118,12 @@ const News = () => {
           ))}
         </div>
 
-        {/* Load more */}
         <div className="mt-16 text-center">
           <button className="px-8 py-4 bg-white/10 backdrop-blur text-(--color-text) font-bold rounded-full border border-white/20 hover:bg-linear-to-r hover:from-(--color-primary) hover:to-(--color-primary-dark) hover:border-transparent transition-all duration-300 hover:scale-105">
             Carica altre news
           </button>
         </div>
+        <CallToAction />
       </div>
     </section>
   );

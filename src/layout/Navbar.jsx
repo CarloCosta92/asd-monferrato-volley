@@ -14,7 +14,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full h-20 bg-linear-to-b from-(--color-bg-main) to-(--color-bg-alt) border-b border-(--color-border) z-50">
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
-        {/* Logo */}
         <NavLink to="/" className="font-bold text-xl text-(--color-primary)">
           Asd Monferrato Volley
         </NavLink>
@@ -37,7 +36,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Hamburger button */}
         <button
           className="md:hidden text-(--color-text)"
           onClick={() => setOpen(!open)}
@@ -47,7 +45,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-(--color-bg-alt) border-t border-(--color-border)">
           <div className="flex flex-col px-6 py-4 gap-4">
