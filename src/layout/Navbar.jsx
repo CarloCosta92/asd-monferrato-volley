@@ -3,12 +3,22 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const navLinks = [
     { path: "/", label: "Home" },
+    { path: "/news", label: "News" },
     { path: "/squadre", label: "Squadre" },
     { path: "/contatti", label: "Contatti" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full h-20 bg-(--color-bg-main) border-b border-(--color-border) z-50">
+    <nav
+      className="
+  fixed top-0 w-full h-20
+  bg-linear-to-b
+  from-(--color-bg-main)
+  to-(--color-bg-alt)
+  border-b border-(--color-border)
+  z-50
+"
+    >
       <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
         <NavLink to="/" className="font-bold text-xl text-(--color-primary)">
           Asd Monferrato Volley

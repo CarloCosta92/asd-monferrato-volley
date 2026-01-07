@@ -4,6 +4,7 @@ import DefaultLayout from "./layout/DefaultLayout";
 import Home from "./pages/Home";
 import Teams from "./pages/Teams";
 import Contact from "./pages/Contact";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <DefaultLayout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
           <Route path="/squadre" element={<Teams />} />
           <Route path="/contatti" element={<Contact />} />
         </Routes>
