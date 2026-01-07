@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layout/DefaultLayout";
 import Home from "./pages/Home";
+import Teams from "./pages/Teams";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <DefaultLayout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/squadre" element={<Teams />} />
         </Routes>
       </DefaultLayout>
     </BrowserRouter>

@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinks = [{ path: "/", label: "Home" }];
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/squadre", label: "Squadre" },
+  ];
 
   return (
     <nav className="fixed top-0 w-full h-20 bg-(--color-bg-main) border-b border-(--color-border) z-50">

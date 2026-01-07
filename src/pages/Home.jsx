@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Trophy, Users, Calendar, TrendingUp } from "lucide-react";
+import Button from "../components/Button";
 
 const Home = () => {
   const stats = [
@@ -23,18 +24,12 @@ const Home = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/squadre"
-              className="px-8 py-4 bg-(--color-primary) hover:bg-(--color-primary-dark) transition rounded-full font-semibold"
-            >
+            <Button to="/squadre" variant="primary">
               Scopri le squadre
-            </Link>
-            <Link
-              to="/contatti"
-              className="px-8 py-4 border border-(--color-border) hover:border-(--color-primary) transition rounded-full"
-            >
+            </Button>
+            <Button to="/contatti" variant="outline">
               Contattaci
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
