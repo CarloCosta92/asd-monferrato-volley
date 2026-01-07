@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-main: #0f172a;
+  /* slate-900, scuro */
+  --color-bg-alt: #1e293b;
+  /* slate-800 */
+  --color-text: #f1f5f9;
+  /* grigio chiaro quasi bianco */
+  --color-text-muted: #94a3b8;
+  /* grigio medio */
+  --color-primary: #f97316;
+  /* arancione */
+  --color-primary-dark: #ea580c;
+  --color-secondary: #ef4444;
+  /* rosso */
+  --color-border: rgba(255, 255, 255, 0.1);
+}
