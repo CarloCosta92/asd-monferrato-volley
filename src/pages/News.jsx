@@ -118,11 +118,6 @@ const News = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <button className="px-8 py-4 bg-white/10 backdrop-blur text-(--color-text) font-bold rounded-full border border-white/20 hover:bg-linear-to-r hover:from-(--color-primary) hover:to-(--color-primary-dark) hover:border-transparent transition-all duration-300 hover:scale-105">
-            Carica altre news
-          </button>
-        </div>
         <CallToAction />
       </div>
     </section>
