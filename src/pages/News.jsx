@@ -52,7 +52,7 @@ const News = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-black text-(--color-text) mb-6">
             News &{" "}
-            <span className="bg-linear-to-r from-(--color-primary) to-(--color-primary-dark) bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
               Eventi
             </span>
           </h1>

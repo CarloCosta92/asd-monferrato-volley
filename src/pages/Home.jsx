@@ -17,7 +17,9 @@ const Home = () => {
         <div className="max-w-4xl text-center px-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="block">Vola alto</span>
-            <span className="text-(--color-primary)">con noi</span>
+            <span className="bg-linear-to-r from-(--color-primary) to-(--color-secondary) bg-clip-text text-transparent">
+              con noi
+            </span>
           </h1>
 
           <p className="text-(--color-text-muted) text-lg mb-10">
