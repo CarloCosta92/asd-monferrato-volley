@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { contactSchema } from "../schemas/ContactShema";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Button from "../components/Button";
 import CallToAction from "../components/CalltoAction";
+import { contactSchema } from "../schemas/contactShema";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
